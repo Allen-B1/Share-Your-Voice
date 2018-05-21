@@ -3,8 +3,8 @@ body {
 
  /* Make body a grid */
  display: grid;
- /* Make there be four rows: the first & second row do not expand, the third & forth (where the buttons are) do expand */
- grid-template-rows: auto auto 1fr 1fr;
+ /* Make there be 5 rows: the first, second & fifth row do not expand, the third & forth (where the buttons are) do expand */
+ grid-template-rows: auto auto 1fr 1fr auto;
 
  /* Make there be two columns that fill (each is ~50%) */
  grid-template-columns: 1fr 1fr;
