@@ -1,9 +1,20 @@
 body {
  backround-color: #D3D3D3;
-}
-.table {
- width: 100%;
- height: 70vh;
+
+ /* Make body a grid */
+ display: grid;
+ /* Make there be four rows: the first & second row do not expand, the third & forth (where the buttons are) do expand */
+ grid-template-rows: auto auto 1fr 1fr;
+
+ /* Make there be two columns that fill (each is ~50%) */
+ grid-template-columns: 1fr 1fr;
+
+ /* Make the grid fill the whole window vertically (horizontally isn't needed because that happens automatically) */
+ height: 100vh;
+
+ /* Remove margins around body */
+ margin: 0;
+
 }
 .button {
  height: 100%;
@@ -12,25 +23,37 @@ body {
  border: none;
  font-family: raleway;
 }
-.td {
- height: 50%;
- width: 50%;
-}
 #buttonOne {
  background-color: #1E90FF;
  color: black;
+
+/* Row 3, column 1 */
+ grid-row: 3;
+ grid-column: 1;
 }
 #buttonTwo {
  background-color: #55DE52;
  color: black;
+
+/* Row 3, column 2 */
+ grid-row: 3;
+ grid-column: 2;
 }
 #buttonThree {
  background-color: red;
  color: black;
+
+/* Row 4, column 1 */
+ grid-row: 4;
+ grid-column: 1;
 }
 #buttonFour {
  background-color: yellow;
  color: black;
+
+/* Row 4, column 2 */
+ grid-row: 4;
+ grid-column: 2;
 }
 .heading {
  font-family: raleway;
@@ -39,4 +62,24 @@ body {
 .question {
  text-align: center;
  font-family: raleway;
+
+/* Second row */
+ grid-row: 2;
+/* Start at column 1, but span two columns (both columns) */
+ grid-column: 1 / span 2;
+}
+
+#heading {
+/* First row */
+ grid-row: 1;
+/* Start at column 1, but span two columns (both columns) */
+ grid-column: 1 / span 2;
+}
+
+#comment-box {
+ /* Add 16px of padding (empty space) around the comment-box */
+ padding: 16px;
+
+ grid-row: 5;
+ grid-column: 1 / span 2;
 }

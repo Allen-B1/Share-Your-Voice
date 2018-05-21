@@ -5,22 +5,19 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
- <h1 class="heading">Share Your Voice</h1>
+ <h1 class="heading" id="heading">Share Your Voice</h1>
  <h3 class="question" id="question"></h3>
- <table class="table" align="center">
-   <tr>
-    <td><span><button id="buttonOne" class="button" onclick="voteSubmitted('buttonOne')"></button></span></td>
-    <td><span><button id="buttonTwo" class="button" onclick="voteSubmitted('buttonTwo')"></button></span></td>
-   </tr>
-   <tr>
-    <td><span><button id="buttonThree" class="button" onclick="voteSubmitted('buttonThree')"></button></span></td>
-    <td><span><button id="buttonFour" class="button" onclick="voteSubmitted('buttonFour')"></button></span></td>
-   </tr>
- </table>
- <br>
+ <button id="buttonOne" class="button" onclick="voteSubmitted('buttonOne')"></button>
+ <button id="buttonTwo" class="button" onclick="voteSubmitted('buttonTwo')"></button>
+ <button id="buttonThree" class="button" onclick="voteSubmitted('buttonThree')"></button>
+ <button id="buttonFour" class="button" onclick="voteSubmitted('buttonFour')"></button>
+
+ <div id="comment-box">
   <h class="comment">If you have more to say make a comment below!</h>
   <br>
   <input type="text" id="textBox" placeholder="Comment here">
+ </div>
+
   <script src="https://www.gstatic.com/firebasejs/4.13.0/firebase.js"></script>
   <script>
     // Initialize Firebase
